@@ -64,7 +64,7 @@ payload_main:
 	bl	map_open_path
 	// Add redirection for the flash vsh directory
 	addi	%r3, %r31, ADDR_IN_PAGE(path_flash_vsh)
-	addi	%r3, %r31, ADDR_IN_PAGE(path_usb_default_vsh)
+	addi	%r4, %r31, ADDR_IN_PAGE(path_usb_default_vsh)
 	bl	map_open_path
 
 	APPLY_PATCHES(%r30, %r31)
